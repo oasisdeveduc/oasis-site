@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Actions - OASIS ÉDUCATION ET DÉVELOPPEMENT</title>
+    <meta name="description" content="Découvrez les projets et actions de l'ONG OASIS ÉDUCATION ET DÉVELOPPEMENT : autonomisation des femmes, protection des enfants, environnement et plus.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="logo">
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link active">Nos actions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="team.html" class="nav-link">Équipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="join.html" class="nav-link">Rejoindre OED</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Nos Actions</h1>
+                <p>Découvrez nos projets concrets qui transforment des vies et construisent un avenir meilleur pour notre communauté.</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Nos actions</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                <button class="filter-btn" data-filter="women">Femmes</button>
+                <button class="filter-btn" data-filter="children">Enfants</button>
+                <button class="filter-btn" data-filter="environment">Environnement</button>
+                <button class="filter-btn" data-filter="health">Santé</button>
+                <button class="filter-btn" data-filter="education">Éducation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projets en vedette</h2>
+                <p>Nos initiatives les plus impactantes</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Women Empowerment -->
+                <div class="project-card featured" data-category="women">
+                    <div class="project-image">
+                        <img src="images/project-women.jpg" alt="Formation des femmes">
+                        <div class="project-overlay">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Autonomisation des femmes</div>
+                        <h3>Formation en activités génératrices de revenus</h3>
+                        <p>Programme de formation et d'accompagnement des femmes dans le développement d'activités génératrices de revenus pour leur autonomisation économique.</p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">150</span>
+                                <span class="stat-label">Femmes formées</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Taux de réussite</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#project-women" class="btn btn-primary">En savoir plus</a>
+                            <button class="donate-btn" data-amount="25000" data-type="women">
+                                <i class="fas fa-heart"></i> Soutenir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Children Protection -->
+                <div class="project-card featured" data-category="children">
+                    <div class="project-image">
+                        <img src="images/project-children-protection.jpg" alt="Protection des enfants">
+                        <div class="project-overlay">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Protection des enfants</div>
+                        <h3>Centre d'accueil pour orphelins</h3>
+                        <p>Création et gestion d'un centre d'accueil offrant éducation, soins et soutien psychologique aux enfants orphelins et vulnérables.</p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">45</span>
+                                <span class="stat-label">Enfants accueillis</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Scolarisation</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#project-children" class="btn btn-primary">En savoir plus</a>
+                            <button class="donate-btn" data-amount="15000" data-type="children">
+                                <i class="fas fa-heart"></i> Soutenir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Environment -->
+                <div class="project-card featured" data-category="environment">
+                    <div class="project-image">
+                        <img src="images/project-environment.jpg" alt="Protection environnement">
+                        <div class="project-overlay">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Environnement</div>
+                        <h3>Programme de reforestation</h3>
+                        <p>Initiative de reforestation et de sensibilisation à la protection de l'environnement avec les communautés locales.</p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">5,000</span>
+                                <span class="stat-label">Arbres plantés</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Villages impliqués</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#project-environment" class="btn btn-primary">En savoir plus</a>
+                            <button class="donate-btn" data-amount="10000" data-type="environment">
+                                <i class="fas fa-heart"></i> Soutenir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects -->
+    <section class="all-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tous nos projets</h2>
+                <p>Un aperçu complet de nos actions</p>
+            </div>
+            <div class="projects-grid detailed">
+                <!-- Project 4: Health -->
+                <div class="project-card" data-category="health">
+                    <div class="project-image">
+                        <img src="images/project-health.jpg" alt="Santé reproductive">
+                        <div class="project-overlay">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-status completed">Terminé</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Santé</div>
+                        <h3>Santé reproductive et nutrition</h3>
+                        <p>Amélioration de la santé reproductive et de la nutrition des populations défavorisées.</p>
+                        <div class="project-actions">
+                            <a href="#project-health" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Education -->
+                <div class="project-card" data-category="education">
+                    <div class="project-image">
+                        <img src="images/project-education.jpg" alt="Centres éducatifs">
+                        <div class="project-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Éducation</div>
+                        <h3>Centres sociaux et culturels</h3>
+                        <p>Création de centres pour l'éducation, la formation et l'insertion sociale.</p>
+                        <div class="project-actions">
+                            <a href="#project-education" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Violence Prevention -->
+                <div class="project-card" data-category="women">
+                    <div class="project-image">
+                        <img src="images/project-violence-prevention.jpg" alt="Lutte contre les violences">
+                        <div class="project-overlay">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Protection</div>
+                        <h3>Lutte contre les violences basées sur le genre</h3>
+                        <p>Protection et soutien des victimes de violences basées sur le genre.</p>
+                        <div class="project-actions">
+                            <a href="#project-violence" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Peace Building -->
+                <div class="project-card" data-category="education">
+                    <div class="project-image">
+                        <img src="images/project-peace.jpg" alt="Lutte contre l'extrémisme">
+                        <div class="project-overlay">
+                            <i class="fas fa-peace"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Paix</div>
+                        <h3>Lutte contre l'extrémisme violent</h3>
+                        <p>Programme de sensibilisation et de prévention contre l'extrémisme violent.</p>
+                        <div class="project-actions">
+                            <a href="#project-peace" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Digital Literacy -->
+                <div class="project-card" data-category="women">
+                    <div class="project-image">
+                        <img src="images/project-digital.jpg" alt="Formation numérique">
+                        <div class="project-overlay">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="project-status">En cours</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Innovation</div>
+                        <h3>Formation numérique pour les jeunes</h3>
+                        <p>Formation aux compétences numériques et à l'entrepreneuriat pour les jeunes.</p>
+                        <div class="project-actions">
+                            <a href="#project-digital" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Community Development -->
+                <div class="project-card" data-category="education">
+                    <div class="project-image">
+                        <img src="images/project-community.jpg" alt="Développement communautaire">
+                        <div class="project-overlay">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="project-status completed">Terminé</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Développement</div>
+                        <h3>Développement communautaire</h3>
+                        <p>Programme de développement communautaire intégré dans plusieurs villages.</p>
+                        <div class="project-actions">
+                            <a href="#project-community" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Titre du projet</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="project-detail-image">
+                    <img id="modal-image" src="" alt="">
+                </div>
+                <div class="project-detail-content">
+                    <div class="project-detail-category" id="modal-category"></div>
+                    <div class="project-detail-status" id="modal-status"></div>
+                    <div class="project-detail-description" id="modal-description"></div>
+                    <div class="project-detail-objectives">
+                        <h4>Objectifs</h4>
+                        <ul id="modal-objectives"></ul>
+                    </div>
+                    <div class="project-detail-results">
+                        <h4>Résultats obtenus</h4>
+                        <div class="results-grid" id="modal-results"></div>
+                    </div>
+                    <div class="project-detail-gallery">
+                        <h4>Galerie photos</h4>
+                        <div class="gallery-grid" id="modal-gallery"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close">Fermer</button>
+                <button class="btn btn-primary donate-btn" id="modal-donate">
+                    <i class="fas fa-heart"></i> Soutenir ce projet
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Statistics -->
+    <section class="project-statistics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impact de nos projets</h2>
+                <p>Des résultats concrets qui transforment des vies</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Bénéficiaires directs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Communautés touchées</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Partenaires</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Soutenez nos projets</h2>
+                <p>Votre contribution permet de continuer nos actions et d'étendre notre impact dans la communauté.</p>
+                <div class="cta-buttons">
+                    <a href="join.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        Faire un don
+                    </a>
+                    <a href="join.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        Devenir partenaire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="footer-logo-img">
+                        <h3>OASIS ÉDUCATION ET DÉVELOPPEMENT</h3>
+                    </div>
+                    <p>Organisation non gouvernementale apolitique et à but non lucratif œuvrant pour l'éducation, la dignité et le développement durable au Bénin.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="projects.html">Nos actions</a></li>
+                        <li><a href="team.html">Équipe</a></li>
+                        <li><a href="news.html">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Djougou, Donga, Bénin</p>
+                        <p><i class="fas fa-phone"></i> +229 XX XX XX XX</p>
+                        <p><i class="fas fa-envelope"></i> contact@oasis-education-dev.org</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos actions et projets</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OASIS ÉDUCATION ET DÉVELOPPEMENT. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

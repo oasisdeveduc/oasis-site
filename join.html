@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejoindre OED - OASIS ÉDUCATION ET DÉVELOPPEMENT</title>
+    <meta name="description" content="Rejoignez l'ONG OASIS ÉDUCATION ET DÉVELOPPEMENT : adhérez, devenez bénévole, partenaire ou faites un don pour soutenir nos actions.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Stripe.js pour le paiement par carte -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="logo">
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">Nos actions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="team.html" class="nav-link">Équipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="join.html" class="nav-link active">Rejoindre OED</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Rejoindre OED</h1>
+                <p>Ensemble, créons un monde meilleur. Rejoignez notre mission et participez au développement durable de notre communauté.</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Rejoindre OED</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Options -->
+    <section class="join-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comment nous rejoindre</h2>
+                <p>Plusieurs façons de contribuer à notre mission</p>
+            </div>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Adhérer</h3>
+                    <p>Devenez membre de l'organisation et participez activement à nos décisions et projets.</p>
+                    <button class="btn btn-primary" onclick="showJoinForm('member')">Adhérer maintenant</button>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Devenir bénévole</h3>
+                    <p>Offrez votre temps et vos compétences pour soutenir nos actions sur le terrain.</p>
+                    <button class="btn btn-primary" onclick="showJoinForm('volunteer')">Devenir bénévole</button>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Devenir partenaire</h3>
+                    <p>Organisation ou entreprise, devenez notre partenaire pour amplifier notre impact.</p>
+                    <button class="btn btn-primary" onclick="showJoinForm('partner')">Devenir partenaire</button>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Faire un don</h3>
+                    <p>Soutenez financièrement nos projets et contribuez directement à nos actions.</p>
+                    <button class="btn btn-primary" onclick="showDonationForm()">Faire un don</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="membership-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Avantages de l'adhésion</h2>
+                <p>Ce que vous obtenez en rejoignant OED</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <h3>Participation aux décisions</h3>
+                    <p>Votez lors des assemblées générales et participez aux décisions importantes de l'organisation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Accès aux rapports</h3>
+                    <p>Recevez régulièrement nos rapports d'activités et nos bilans financiers détaillés.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Événements exclusifs</h3>
+                    <p>Participez à nos événements réservés aux membres et bénévoles.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificat de participation</h3>
+                    <p>Obtenez un certificat attestant votre participation à nos programmes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Réseau professionnel</h3>
+                    <p>Intégrez un réseau de professionnels engagés pour le développement durable.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formations gratuites</h3>
+                    <p>Bénéficiez de formations gratuites sur les enjeux du développement durable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Form Modal -->
+    <div id="join-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="join-modal-title">Rejoindre OED</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-info">
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Champs obligatoires :</strong> Les champs marqués d'un astérisque rouge (*) sont obligatoires et doivent être remplis pour valider votre candidature.</p>
+                    </div>
+                </div>
+                <form id="join-form" class="join-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname" class="form-label required">Nom complet</label>
+                            <input type="text" id="fullname" name="fullname" class="form-control" required>
+                            <div class="field-help">Votre nom complet tel qu'il apparaît sur votre pièce d'identité</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label required">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="field-help">Nous vous enverrons les informations importantes à cette adresse</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label required">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="field-help">Format : +229 XX XX XX XX</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age" class="form-label">Âge</label>
+                            <input type="number" id="age" name="age" class="form-control" min="18" max="100">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" class="form-label required">Adresse complète</label>
+                        <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
+                        <div class="field-help">Votre adresse complète avec ville et code postal</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profession" class="form-label">Profession</label>
+                            <input type="text" id="profession" name="profession" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="organization" class="form-label">Organisation (si applicable)</label>
+                            <input type="text" id="organization" name="organization" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivation" class="form-label required">Motivation pour rejoindre OED</label>
+                        <textarea id="motivation" name="motivation" class="form-control" rows="4" required placeholder="Expliquez pourquoi vous souhaitez rejoindre OED et comment vous pouvez contribuer à notre mission..."></textarea>
+                        <div class="field-help">Décrivez votre motivation et comment vous souhaitez contribuer (minimum 50 caractères)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills" class="form-label">Compétences et expériences</label>
+                        <textarea id="skills" name="skills" class="form-control" rows="3" placeholder="Décrivez vos compétences, expériences et domaines d'expertise..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="availability" class="form-label">Disponibilité</label>
+                        <textarea id="availability" name="availability" class="form-control" rows="2" placeholder="Quels sont vos disponibilités pour participer aux activités..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hear-about" class="form-label">Comment avez-vous entendu parler de OED ?</label>
+                        <select id="hear-about" name="hear-about" class="form-control">
+                            <option value="">Sélectionnez une option</option>
+                            <option value="website">Site web</option>
+                            <option value="social-media">Réseaux sociaux</option>
+                            <option value="recommendation">Recommandation</option>
+                            <option value="event">Événement</option>
+                            <option value="media">Médias</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="1">
+                            <span class="checkmark"></span>
+                            Je souhaite recevoir la newsletter de OED
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" value="1" required>
+                            <span class="checkmark"></span>
+                            J'accepte la <a href="privacy.html" target="_blank">politique de confidentialité</a> *
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary modal-close">Annuler</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma candidature
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Form Modal -->
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Faire un don</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="donation-info">
+                    <p>Votre don nous aide à continuer nos actions pour l'éducation et le développement durable. Chaque contribution compte et fait la différence.</p>
+                </div>
+                
+                <form id="donation-form" class="donation-form">
+                    <div class="donation-amounts">
+                        <h4>Choisissez un montant</h4>
+                        <div class="amount-buttons">
+                            <button type="button" class="amount-btn" data-amount="5000">5 000 FCFA</button>
+                            <button type="button" class="amount-btn" data-amount="10000">10 000 FCFA</button>
+                            <button type="button" class="amount-btn" data-amount="25000">25 000 FCFA</button>
+                            <button type="button" class="amount-btn" data-amount="50000">50 000 FCFA</button>
+                            <button type="button" class="amount-btn" data-amount="100000">100 000 FCFA</button>
+                        </div>
+                        
+                        <div class="custom-amount">
+                            <label for="custom-amount" class="form-label">Montant personnalisé (FCFA)</label>
+                            <input type="number" id="custom-amount" name="custom-amount" class="form-control" min="1000" placeholder="Entrez votre montant">
+                        </div>
+                        
+                        <div class="selected-amount-display">
+                            <div class="amount-display">
+                                <span class="amount-label">Montant sélectionné :</span>
+                                <span class="amount-value" id="selected-amount">0 FCFA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-type">
+                        <h4>Type de don</h4>
+                        <div class="type-options">
+                            <label class="radio-label">
+                                <input type="radio" name="donation-type" value="general" checked>
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Don général</strong>
+                                    <p>Utilisé là où le besoin est le plus urgent</p>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="donation-type" value="women">
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Autonomisation des femmes</strong>
+                                    <p>Formation et activités génératrices de revenus</p>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="donation-type" value="children">
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Protection des enfants</strong>
+                                    <p>Éducation et soins pour les orphelins</p>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="donation-type" value="environment">
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Protection environnementale</strong>
+                                    <p>Reforestation et sensibilisation</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-frequency">
+                        <h4>Fréquence</h4>
+                        <div class="frequency-options">
+                            <label class="radio-label">
+                                <input type="radio" name="frequency" value="one-time" checked>
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Don unique</strong>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="frequency" value="monthly">
+                                <span class="radio-mark"></span>
+                                <div class="radio-content">
+                                    <strong>Don mensuel</strong>
+                                    <p>Renouvelé automatiquement chaque mois</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="donor-info">
+                        <h4>Vos informations</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donor-name" class="form-label required">Nom complet</label>
+                                <input type="text" id="donor-name" name="donor-name" class="form-control">
+                                <div class="field-help">Nom tel qu'il apparaît sur votre carte bancaire</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-email" class="form-label required">Email</label>
+                                <input type="email" id="donor-email" name="donor-email" class="form-control">
+                                <div class="field-help">Pour recevoir votre reçu de don</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="anonymous" value="1">
+                                <span class="checkmark"></span>
+                                Faire un don anonyme
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Section de paiement par carte bancaire -->
+                    <div class="payment-section">
+                        <h4>💳 Paiement sécurisé par carte bancaire</h4>
+                        <div class="payment-info">
+                            <p>Votre paiement est sécurisé et crypté. Nous acceptons toutes les cartes principales.</p>
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method active" data-method="card">
+                                <div class="method-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h5>Carte bancaire</h5>
+                                    <p>Visa, Mastercard, American Express</p>
+                                </div>
+                                <div class="method-selected">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-details" id="card-details">
+                            <div class="form-group">
+                                <label for="card-number" class="form-label required">Numéro de carte</label>
+                                <div class="card-input-container">
+                                    <input type="text" id="card-number" name="card-number" class="form-control card-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    <div class="card-icons">
+                                        <img src="https://js.stripe.com/v3/fingerprinted/img/visa.svg" alt="Visa" class="card-icon">
+                                        <img src="https://js.stripe.com/v3/fingerprinted/img/mastercard.svg" alt="Mastercard" class="card-icon">
+                                        <img src="https://js.stripe.com/v3/fingerprinted/img/amex.svg" alt="American Express" class="card-icon">
+                                    </div>
+                                </div>
+                                <div class="field-help">16 chiffres sans espaces</div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry" class="form-label required">Date d'expiration</label>
+                                    <input type="text" id="card-expiry" name="card-expiry" class="form-control" placeholder="MM/AA" maxlength="5">
+                                    <div class="field-help">Format : MM/AA</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvc" class="form-label required">CVC</label>
+                                    <input type="text" id="card-cvc" name="card-cvc" class="form-control" placeholder="123" maxlength="4">
+                                    <div class="field-help">3 chiffres au dos de la carte</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-name" class="form-label required">Nom sur la carte</label>
+                                <input type="text" id="card-name" name="card-name" class="form-control" placeholder="Nom tel qu'il apparaît sur la carte">
+                                <div class="field-help">Exactement comme inscrit sur votre carte</div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="save-card" value="1">
+                                    <span class="checkmark"></span>
+                                    Sauvegarder cette carte pour les futurs dons (optionnel)
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="security-info">
+                            <div class="security-badges">
+                                <div class="security-badge">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Paiement sécurisé SSL</span>
+                                </div>
+                                <div class="security-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Données cryptées</span>
+                                </div>
+                                <div class="security-badge">
+                                    <i class="fab fa-stripe"></i>
+                                    <span>Powered by Stripe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary modal-close">Annuler</button>
+                        <button type="submit" class="btn btn-primary" id="donate-btn">
+                            <i class="fas fa-heart"></i>
+                            <span class="btn-text">Payer <span id="btn-amount">0 FCFA</span></span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Traitement...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Témoignages</h2>
+                <p>Ce que disent nos membres et bénévoles</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Rejoindre OED a été une expérience transformatrice. J'ai pu contribuer concrètement à l'autonomisation des femmes dans ma communauté."</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial-1.jpg" alt="Fatouma">
+                            </div>
+                            <div class="author-info">
+                                <h4>Fatouma S.</h4>
+                                <span>Membre depuis 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"En tant que bénévole, j'ai pu voir l'impact direct de nos actions sur les enfants orphelins. C'est très gratifiant."</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial-2.jpg" alt="Jean">
+                            </div>
+                            <div class="author-info">
+                                <h4>Jean K.</h4>
+                                <span>Bénévole depuis 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Notre entreprise est fière d'être partenaire de OED. Ensemble, nous créons un impact positif durable."</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial-3.jpg" alt="Marie">
+                            </div>
+                            <div class="author-info">
+                                <h4>Marie A.</h4>
+                                <span>Partenaire</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à faire la différence ?</h2>
+                <p>Rejoignez-nous dès aujourd'hui et participez à la construction d'un avenir meilleur pour notre communauté.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="showJoinForm('member')">
+                        <i class="fas fa-user-plus"></i>
+                        Adhérer maintenant
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="showDonationForm()">
+                        <i class="fas fa-heart"></i>
+                        Faire un don
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="footer-logo-img">
+                        <h3>OASIS ÉDUCATION ET DÉVELOPPEMENT</h3>
+                    </div>
+                    <p>Organisation non gouvernementale apolitique et à but non lucratif œuvrant pour l'éducation, la dignité et le développement durable au Bénin.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="projects.html">Nos actions</a></li>
+                        <li><a href="team.html">Équipe</a></li>
+                        <li><a href="news.html">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Djougou, Donga, Bénin</p>
+                        <p><i class="fas fa-phone"></i> +229 XX XX XX XX</p>
+                        <p><i class="fas fa-envelope"></i> contact@oasis-education-dev.org</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos actions et projets</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OASIS ÉDUCATION ET DÉVELOPPEMENT. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/join.js"></script>
+    <script src="js/stripe-payment.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

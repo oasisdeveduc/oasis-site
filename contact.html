@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OASIS ÉDUCATION ET DÉVELOPPEMENT</title>
+    <meta name="description" content="Contactez l'ONG OASIS ÉDUCATION ET DÉVELOPPEMENT à Djougou, Bénin. Formulaire de contact, adresse, téléphone et carte interactive.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="logo">
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">Nos actions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="team.html" class="nav-link">Équipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="join.html" class="nav-link">Rejoindre OED</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Contactez-nous</h1>
+                <p>Nous sommes là pour répondre à vos questions et échanger sur nos projets. N'hésitez pas à nous contacter !</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Notre adresse</h3>
+                    <p>Djougou, Département de la Donga<br>République du Bénin</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>+229 XX XX XX XX<br>+229 XX XX XX XX</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@oasis-education-dev.org<br>info@oasis-education-dev.org</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Heures d'ouverture</h3>
+                    <p>Lundi - Vendredi: 8h00 - 17h00<br>Samedi: 8h00 - 12h00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-section">
+                    <div class="section-header">
+                        <h2>Envoyez-nous un message</h2>
+                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label required">Nom complet</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <div class="field-help">Votre nom complet pour vous recontacter</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div class="field-help">Pour recevoir notre réponse</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Sujet</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Sujet de votre message">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label required">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="6" required placeholder="Décrivez votre message en détail..."></textarea>
+                            <div class="field-help">Décrivez votre demande en détail (minimum 20 caractères)</div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="1">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir la newsletter de OED
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-map-section">
+                    <div class="section-header">
+                        <h2>Notre localisation</h2>
+                        <p>Retrouvez-nous à Djougou, dans le département de la Donga au Bénin.</p>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div id="map" class="map">
+                            <!-- Google Maps will be loaded here -->
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Carte interactive</p>
+                                <small>Djougou, Donga, Bénin</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-info">
+                        <div class="info-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>En voiture</h4>
+                                <p>Accessible depuis la route principale de Djougou</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-bus"></i>
+                            <div>
+                                <h4>En transport public</h4>
+                                <p>Arrêt de bus à proximité</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-wheelchair"></i>
+                            <div>
+                                <h4>Accessibilité</h4>
+                                <p>Bâtiment accessible aux personnes à mobilité réduite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions fréquentes</h2>
+                <p>Retrouvez les réponses aux questions les plus courantes</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment puis-je devenir membre de OED ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour devenir membre, vous pouvez remplir le formulaire d'adhésion sur notre page "Rejoindre OED" ou nous contacter directement. Notre équipe examinera votre candidature et vous contactera dans les plus brefs délais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment puis-je faire un don ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez faire un don en ligne via notre formulaire de don sécurisé, par virement bancaire, ou en nous contactant directement. Tous les dons sont utilisés pour financer nos projets de développement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quels sont les types de projets que vous menez ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous menons des projets dans plusieurs domaines : autonomisation des femmes, protection des enfants, protection de l'environnement, santé reproductive, éducation et lutte contre l'extrémisme violent.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment puis-je devenir bénévole ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour devenir bénévole, remplissez le formulaire de candidature bénévole sur notre site ou contactez-nous. Nous avons besoin de bénévoles pour nos projets sur le terrain, la communication, et l'organisation d'événements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment puis-je suivre l'utilisation de mon don ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous publions régulièrement des rapports d'activités et des bilans financiers. Les donateurs reçoivent également des mises à jour par email sur l'impact de leur contribution.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Où puis-je trouver vos rapports financiers ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos rapports financiers sont disponibles sur demande et publiés annuellement. Vous pouvez les demander par email ou les consulter lors de nos assemblées générales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-media">
+        <div class="container">
+            <div class="section-header">
+                <h2>Suivez-nous sur les réseaux sociaux</h2>
+                <p>Restez connecté avec nos dernières actualités et actions</p>
+            </div>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>Facebook</h4>
+                        <p>@OasisEducationDev</p>
+                        <span>Suivez-nous</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>Instagram</h4>
+                        <p>@oasis_education_dev</p>
+                        <span>Suivez-nous</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>LinkedIn</h4>
+                        <p>OASIS ÉDUCATION ET DÉVELOPPEMENT</p>
+                        <span>Connectez-vous</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>Twitter</h4>
+                        <p>@OED_Benin</p>
+                        <span>Suivez-nous</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-oed.png" alt="Logo OED" class="footer-logo-img">
+                        <h3>OASIS ÉDUCATION ET DÉVELOPPEMENT</h3>
+                    </div>
+                    <p>Organisation non gouvernementale apolitique et à but non lucratif œuvrant pour l'éducation, la dignité et le développement durable au Bénin.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="projects.html">Nos actions</a></li>
+                        <li><a href="team.html">Équipe</a></li>
+                        <li><a href="news.html">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Djougou, Donga, Bénin</p>
+                        <p><i class="fas fa-phone"></i> +229 XX XX XX XX</p>
+                        <p><i class="fas fa-envelope"></i> contact@oasis-education-dev.org</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos actions et projets</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OASIS ÉDUCATION ET DÉVELOPPEMENT. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
