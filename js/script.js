@@ -23,17 +23,39 @@ function initNavigation() {
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
-  const header = document.querySelector('.header');
 
   if (!navToggle || !navMenu) return;
 
-  // Create backdrop (for mobile menu)
-  let backdrop = document.querySelector('.menu-backdrop');
-  if (!backdrop) {
-    backdrop = document.createElement('div');
-    backdrop.className = 'menu-backdrop';
-    document.body.appendChild(backdrop);
-  }
+  // Toggle menu mobile
+  navToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation(); // 🔥 empêche le clic global
+    navMenu.classList.toggle('active');
+    navToggle.classList.toggle('active');
+  });
+
+  // Empêche la fermeture quand on clique DANS le menu
+  navMenu.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+
+  // Fermer quand on clique sur un lien
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navMenu.classList.remove('active');
+      navToggle.classList.remove('active');
+    });
+  });
+
+  // Fermer quand on clique ailleurs
+  document.addEventListener('click', function () {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+  });
+
+  updateActiveNavLink();
+}
+
 
   const setMenuTop = () => {
     // Keep menu under header on mobile
@@ -661,3 +683,4 @@ window.OEDApp = {
   showDonationModal,
   processDonation,
 };
+
