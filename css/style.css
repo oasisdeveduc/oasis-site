@@ -3454,3 +3454,101 @@ p {
 
   .info-box i { align-self: center; }
 }
+
+/* =========================================================
+   ✅ FIX MENU MOBILE + BACKDROP + PETITES AMELIORATIONS
+   (à coller tout en bas de ton fichier CSS)
+========================================================= */
+
+/* Fix image baseline gap */
+img { display: block; }
+
+/* Améliore l'accessibilité au clavier */
+.nav-link:focus,
+.btn:focus,
+button:focus,
+input:focus {
+  outline: 3px solid rgba(30, 144, 255, 0.35);
+  outline-offset: 3px;
+}
+
+/* Backdrop (fond sombre quand menu mobile ouvert) */
+.menu-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 900; /* en dessous du header (1000) mais au-dessus du contenu */
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s ease;
+}
+
+.menu-backdrop.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ✅ Correction menu mobile */
+@media (max-width: 768px){
+
+  /* Important: menu doit être sous le header */
+  .nav-menu{
+    top: 80px; /* par défaut */
+    left: 0;
+    right: 0;
+
+    /* On annule ton ancien système (top:100% + translateY) */
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+
+    border-top: 1px solid rgba(0,0,0,.06);
+    transition: all .25s ease;
+    z-index: 1100; /* au-dessus du backdrop */
+  }
+
+  .nav-menu.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Améliore le rendu des liens */
+  .nav-list{
+    padding: 14px 16px;
+    gap: 0;
+  }
+
+  .nav-item{ width: 100%; }
+
+  .nav-link{
+    width: 100%;
+    padding: 14px 10px;
+    border-radius: 10px;
+    transform: none; /* enlève le translateY au hover sur mobile */
+  }
+
+  .nav-link:hover{
+    background: rgba(46,139,87,.08);
+  }
+
+  .nav-link::after{ display: none; }
+
+  /* Burger plus clean */
+  .nav-toggle{
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+/* ✅ Bonus: évite que le hero soit caché par le header
+   (si tu changes la taille du logo, ajuste la valeur)
+*/
+.hero{
+  padding-top: 160px;
+}
