@@ -3552,3 +3552,40 @@ input:focus {
 .hero{
   padding-top: 160px;
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 80px; /* hauteur du header */
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 2000;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-link {
+    padding: 14px;
+    display: block;
+    width: 100%;
+  }
+}
+
+
