@@ -1,4 +1,5 @@
 // ===== OASIS EDUCATION ET DÉVELOPPEMENT - MAIN JAVASCRIPT FILE =====
+console.log("✅ script.js chargé");
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeApp();
@@ -683,4 +684,5 @@ window.OEDApp = {
   showDonationModal,
   processDonation,
 };
+
 
