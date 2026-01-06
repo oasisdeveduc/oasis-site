@@ -114,7 +114,6 @@ function initNavigation() {
   window.addEventListener('resize', () => {
     if (navMenu.classList.contains('active')) setMenuTop();
   });
-}
 
 // ===== SCROLL EFFECTS =====
 function initScrollEffects() {
@@ -684,5 +683,6 @@ window.OEDApp = {
   showDonationModal,
   processDonation,
 };
+
 
 
