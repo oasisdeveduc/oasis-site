@@ -59,8 +59,6 @@ function initNavigation() {
   });
 }
 
-
-
   const setMenuTop = () => {
     // Keep menu under header on mobile
     if (header) {
